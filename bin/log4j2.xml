@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN" strict= "true">
+    <Properties>
+        <Property name="fileName">C:/Users/inna/eclipse-workspace55/CapitolisTest/Results/Logs.log</Property>
+    </Properties>
+ 
+    <Appenders>
+      
+        <Appender type ="Console" name="STDOUT">
+            <Layout  type="PatternLayout" pattern="[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n" />
+        </Appender>
+		<Appender type ="File" name="File" fileName="${fileName}">
+            <Layout  type="PatternLayout" pattern="[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n" />
+        </Appender>
+    </Appenders>
+    <Loggers>
+        
+        <Root level="all">
+            <AppenderRef ref="File" />
+        </Root>
+    </Loggers>
+</Configuration>
